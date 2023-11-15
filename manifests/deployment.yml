@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ragatgenpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ragatgenpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ragatgenpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ragatgenpipelinesjavascriptdocker 
+          image: myakscontainerregistry2023.azurecr.io/ragatgenpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
